@@ -40,3 +40,6 @@ Weaknesses here ripple into national security, economic resilience, and climate 
    
 5. Solving the debt problem
 6. Sex trafficking
+
+Option 2: Measuring power if we really want to go all out
+In this competition with the U.S. and China, we need to optimize to stay the world power right now and ensure that we will continue to be. How do we do this? It starts with understanding where we are at now. Currently The NAtional Intelligence COunciul uses a blend of GDP< R&D,spoending, population and military capability to measure power. But they're so off and we can do such a better job than that. Our solution? A Multivariate Integrated Model combining Class Realsim Gross INdicators (GDP, Military Spending, population, land area, industrial output), Beckley's Framework with Net Resource Models to subtract liabilities (poverties, internal instability). It will continue to add
