@@ -1,6 +1,48 @@
 # AIPI510_Module_Project_1
 This will be Project 1 for AIPI 510.
-Brainstorming Phase
+
+Rough Draft Phase:
+Project:
+What is the biggest difference between Forecasted and Actual demand and what regions are those underdemand areas? Why are they like that?
+
+Steps:
+1. Take Data from 2015 by subregion and put it all together.
+2. Figure out what the data means
+3. Conduct Exporatory Analysis
+  
+5. Clean the data.
+   a. So take out unneccessary columns (only keep UTC Time at the enbd of hour at the end of the hour for times because we can use this to tell us everything else.
+   b. take out empty columns or columns with NaN values
+
+Submission Deliverables:
+1. Public Communication Deliverable (submitted as link)
+   Must include:
+   A clear and engaging title
+   An explanation of why this story matters and who it's for (your audience)
+   Key findings supported by visualizations and examples
+   Discussion of data limitations, bias, and ethical implications (in accessible language)
+   A compelling narrative arc—what surprised you? What should we take away?
+2. GitHub Repository (submitted as link)
+   Must include:
+   All code used for preprocessing, EDA, and feature engineering (scripts, not just notebooks)
+   A README with:
+      Overview of your project
+      Dataset description and citation
+      Step-by-step instructions to reproduce your analysis
+      Use of branches and pull requests
+   Each group member must make at least one PR
+      Use best practices for reviews and commits
+   Raw and cleaned data (or, if restricted, a clear description of how to access/generate it)
+5. Presentation (8 minutes max) (presented in class on Sep 30th)
+  Must inlcude:
+      Your audience and why this story matters
+      Your dataset and topic of interest
+      Key trends and visualizations uncovered during EDA
+      Any engineered features that shaped your analysis
+      The story your data tells and its ethical implications
+      Final takeaways
+
+Brainstorming Phase:
 Scope
 What: Electricty Demand in MegaWatt Hours
 Where: This will be in U.S. Lower 48 (the ones on the traditional map)
@@ -42,4 +84,4 @@ Weaknesses here ripple into national security, economic resilience, and climate 
 6. Sex trafficking
 
 Option 2: Measuring power if we really want to go all out
-In this competition with the U.S. and China, we need to optimize to stay the world power right now and ensure that we will continue to be. How do we do this? It starts with understanding where we are at now. Currently The NAtional Intelligence COunciul uses a blend of GDP< R&D,spoending, population and military capability to measure power. But they're so off and we can do such a better job than that. Our solution? A Multivariate Integrated Model combining Class Realsim Gross INdicators (GDP, Military Spending, population, land area, industrial output), Beckley's Framework with Net Resource Models to subtract liabilities (poverties, internal instability). It will continue to add
+In this competition with the U.S. and China, we need to optimize to stay the world power right now and ensure that we will continue to be. How do we do this? It starts with understanding where we are at now. Currently The NAtional Intelligence COunciul uses a blend of GDP< R&D,spoending, population and military capability to measure power. But they're so off and we can do such a better job than that. Our solution? A Multivariate Integrated Model combining Class Realsim Gross INdicators (GDP, Military Spending, population, land area, industrial output), Beckley's Framework with Net Resource Models to subtract liabilities (poverties, internal instability). It will continue to add.\
