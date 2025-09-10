@@ -8,11 +8,82 @@ What is the biggest difference between Forecasted and Actual demand and what reg
 Steps:
 1. Take Data from 2015 by subregion and put it all together.
 2. Figure out what the data means
-3. Conduct Exporatory Analysis
-  
-5. Clean the data.
-   a. So take out unneccessary columns (only keep UTC Time at the enbd of hour at the end of the hour for times because we can use this to tell us everything else.
-   b. take out empty columns or columns with NaN values
+3. Conduct Exporatory Analysis - Answer the following questions:
+● Data Context
+  ○ What is the source of the data, and how was it collected?
+The source of the data is the U.S. Energy Information Administration.
+  ○ Are there any known biases or limitations in the data?
+######################LOOK OVER THIS
+There are no known biases or limtations. However there is a disclaimer: The information submitted by reporting entities is preliminary data and is made available "as-is" by EIA. Neither EIA nor reporting entities are responsible for reliance on the data for any specific use. Essentially there
+  ○ How does the data relate to the problem or question you are trying to solve?
+● Data Sampling
+  ○ Is the dataset representative of the population of interest?
+  ○ Is there a need to split the data into train and test sets for modeling purposes?
+  ○ Are there any specific subsets or segments of the data that require separate analysis?
+● Data Structure
+  ○ What are the dimensions of the dataset (number of rows and columns)?
+  ○ What are the data types of the variables (numerical, categorical, text, etc.)?
+  ○ Are there any missing values, and if so, how are they represented?
+● Descriptive Statistics
+  ○ What are the central tendency measures (mean, median, mode) for numerical variables?
+  ○ What are the measures of dispersion (range, variance, standard deviation) for numerical
+    variables?
+  ○ What is the distribution of the variables (normal, skewed, etc.)?
+● Data Quality
+  ○ Are there any duplicated rows or inconsistent values?
+  ○ Are there any outliers or extreme values that need attention?
+  ○ Do the values make sense based on the context and domain knowledge?
+● Variable Relationships
+  ○ Is there any correlation between pairs of numerical variables?
+  ○ Are there any noticeable patterns or trends in the data?
+  ○ How are categorical variables related to numerical variables?
+● Data Visualization
+  ○ How can the variables be visualized effectively (histograms, scatterplots, box plots, etc.)?
+  ○ Do the visualizations reveal any interesting patterns or insights?
+  ○ Are there any subgroups or clusters that can be identified visually?
+● Feature Engineering
+  ○ Are there any new features that can be derived from the existing ones?
+  ○ Is there a need to transform or scale any variables?
+  ○ Are there any variables that can be combined or decomposed?****
+5. Data Integration
+  ○ Integrating multiple sources of data together (ensure consistent formatting)
+6. Data Cleaning
+   a. So take out unneccessary columns (only keep UTC Time at the end of hour at the end of the hour for times because we can use this to tell us everything else).
+   b. Take out empty columns or columns with NaN values. Validate this with Univariate solution (Pearson's/Spearman's Correlation)
+   c. Find where the biggest differences are and make a new column
+  ○ Handling Missing Values
+  ○ Removing Duplicates
+  ○ Handling Outliers
+7. Data Transformation
+  ○ Normalization/standardization
+  ○ Encoding categorical variables
+  ○ Handling skewed data via log transformation
+8. Handling imbalanced data
+9. Feature Engineering
+  ○ Creating new features
+  ○ Creating interaction features
+10. Data Augmentation
+  ○ For images, text
+11. Dimensionality Reduction
+12. Feature Selection
+  ○ Correlation analysis
+  ○ Recursive feature elimination
+  ○ Univariate Selection
+13. Feature Engineering
+  ○ Creating new features
+  ○ Creating interaction features
+14. Data Augmentation
+  ○ For images, text
+15. Dimensionality Reduction
+16. Feature Selection
+  ○ Correlation analysis
+  ○ Recursive feature elimination
+  ○ Univariate Selection
+17. Data Partitioning
+○ Train/test splits
+○ Cross validation
+18. Preventing Data Leakage
+19. Data Versioning & Reproducibility
 
 Submission Deliverables:
 1. Public Communication Deliverable (submitted as link)
