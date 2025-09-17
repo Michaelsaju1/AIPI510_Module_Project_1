@@ -1,5 +1,27 @@
 # AIPI510_Module_Project_1
 This will be Project 1 for AIPI 510.
+Second Draft:
+Context: With the advancement of technology becoming so prevalent in modern times, it is crucial that 
+
+Gap Problem: What are the weakest points in our power infrastructure? 
+
+Literature Review:
+
+Methodology:
+
+Solution:
+
+Analyis:
+
+Conclusion:
+
+Areas for Future Exploration:
+
+How much are we short by right now and how short will we be in the next five to ten years?
+
+
+
+
 
 Rough Draft Phase:
 Project:
