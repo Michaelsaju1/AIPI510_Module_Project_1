@@ -101,42 +101,77 @@ North Dakota
 2
 """
 
-# Split the multi-line string into a list of individual lines.
+state_to_region = {
+    "California": "CAL",
+    "New York": "NY",
+    "Florida": "FLA",
+    "Texas": "TEX",
+    "Virginia": "MIDA",
+    "New Jersey": "MIDA",
+    "Maryland": "MIDA",
+    "Delaware": "MIDA",
+    "Pennsylvania": "MIDA",
+    "Ohio": "MIDW",
+    "Illinois": "MIDW",
+    "Indiana": "MIDW",
+    "Michigan": "MIDW",
+    "Wisconsin": "MIDW",
+    "Minnesota": "MIDW",
+    "Iowa": "MIDW",
+    "Missouri": "CENT",
+    "Kansas": "CENT",
+    "Oklahoma": "CENT",
+    "Arkansas": "CENT",
+    "Louisiana": "CENT",
+    "Tennessee": "TEN",
+    "Kentucky": "TEN",
+    "Georgia": "SE",
+    "Alabama": "SE",
+    "Mississippi": "SE",
+    "North Carolina": "CAR",
+    "South Carolina": "CAR",
+    "Arizona": "SW",
+    "New Mexico": "SW",
+    "Nevada": "SW",   # partly NW or CAL, but lumped as SW for simplicity
+    "Colorado": "NW",
+    "Utah": "NW",
+    "Idaho": "NW",
+    "Montana": "NW",
+    "Wyoming": "NW",
+    "Washington": "NW",
+    "Oregon": "NW",
+    "Massachusetts": "NE",
+    "Connecticut": "NE",
+    "Rhode Island": "NE",
+    "Vermont": "NE",
+    "New Hampshire": "NE",
+    "Maine": "NE",
+    "West Virginia": "MIDA",
+    "North Dakota": "MIDW",
+    "South Dakota": "MIDW",
+    "District of Columbia": "MIDA",
+    # Outliers
+    "Hawaii": "US48",  # doesn’t fit EIA-930, mark separately
+}
+
 lines = data.strip().split('\n')
+output_filename = 'datacenters_by_state.csv'
 
-# The name for the output CSV file.
-output_filename = 'data_centers_by_state.csv'
-
-# Open the file in 'write' mode. `newline=''` prevents extra blank rows.
 with open(output_filename, 'w', newline='') as csvfile:
-    # Create a csv writer object to handle writing rows.
     writer = csv.writer(csvfile)
+    writer.writerow(['State', 'NumberOfDataCenters', 'Region'])  # add Region column
 
-    # Write the header row for the CSV file.
-    writer.writerow(['State', 'NumberOfDataCenters'])
-
-    # Initialize a variable to store the sum of data centers.
     total_data_centers = 0
 
-    # Iterate through the lines list, taking two items at a time (a state and a number).
-    # The `range` function is given a "step" of 2.
     for i in range(0, len(lines), 2):
-        # The state is the current line.
-        state = lines[i]
-
-        # The number of data centers is the next line.
-        count_str = lines[i+1].strip()
-
-        # The number of data centers is the next line.
-        count = lines[i + 1]
-
-        # Clean up the "District of Columbia..." entry by removing the ellipsis.
+        state = lines[i].strip()
         if "..." in state:
             state = state.replace("...", "")
+        count = int(lines[i + 1].strip())
+        total_data_centers += count
 
-        # Write the state and its corresponding count as a new row in the CSV.
-        writer.writerow([state.strip(), count.strip()])
-        total_data_centers += int(count_str)
+        region = state_to_region.get(state, "Unknown")  # fallback if state not mapped
+        writer.writerow([state, count, region])
 
 print(f"Successfully created the CSV file: {output_filename}")
 print(f"The total number of data centers is: {total_data_centers}")

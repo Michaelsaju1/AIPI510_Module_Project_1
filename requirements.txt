@@ -1,4 +1,7 @@
+requests
 pandas
 numpy
 matplotlib
 statsmodels
+python-dotenv
+openpyxl
