@@ -4,7 +4,7 @@
 This project aims to develop a heuristic to find hidden data centers using power grid data. We explored how U.S. power grid flows can reveal the relationship between electricity demand, transmission constraints, and the growth of data centers — particularly those supporting AI infrastructure.
 
 
-### Getting Started
+## Getting Started
 You should register for an API key [here](https://www.eia.gov/opendata/register.php) so that you can run the API calls to download the EIA data.
 
 
