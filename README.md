@@ -1,4 +1,4 @@
-# AIPI510_Module_Project_1
+# Tracing the Currents: From Flows to Data Centers
 
 ## Project Overview Tracing the Currents - From Flows to Data Centers
 This project aims to develop a heuristic to find hidden data centers using power grid data. We explored how U.S. power grid flows can reveal the relationship between electricity demand, transmission constraints, and the growth of data centers — particularly those supporting AI infrastructure.
