@@ -28,3 +28,7 @@ You can then install the dependencies in the virtual environment
 ```
 pip install -r requirements.txt
 ```
+
+### Running the file
+
+The correct Jupyter notebook to use is `power_grid_analysis.ipynb`.
