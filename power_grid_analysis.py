@@ -49,7 +49,7 @@ df.head(10)
 #%% md
 # ## Understanding the data
 # 
-# At first, there appear to be a lot of columns. If we look at the first ten, we can see that there are a lot of NaN values. However, the reason is because this is for only one balancing authority. Each balancing authority uses different types of power generation to meet demand. We're only seeing the first ten hours from the AECI balancing authority. It would be illogical to assume that one authority could have *every* type of power generation. If we look at another balancing authority, we can see the missing values are different. Below is the AVA balancing authority. You can see that they generate power with solar, whereas AECI does not. The key takeaway is that different balancing authorities have different ways of generating power.
+# At first, there appear to be a lot of columns. If we look at the first ten, we can see that there are a lot of NaN values. However, the reason is that this is for only one balancing authority. Each balancing authority uses different types of power generation to meet demand. We're only seeing the first ten hours from the AECI balancing authority. It would be illogical to assume that one authority could have *every* type of power generation. If we look at another balancing authority, we can see the missing values are different. Below is the AVA balancing authority. You can see that they generate power with solar, whereas AECI does not. The key takeaway is that different balancing authorities have different ways of generating power.
 #%%
 df.iloc[4419:4429]
 #%% md
@@ -62,14 +62,14 @@ df.iloc[4419:4429]
 #  - Balancing Authority (BA's): are the companies responsible for balancing electricity supply, demand, and interchange on their electric systems in real time. There are many BAs and the spreadsheet with more information about what they mean can be found here: https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.eia.gov%2Felectricity%2F930-content%2FEIA930_Reference_Tables.xlsx&wdOrigin=BROWSELINK
 # 
 #  - Demand: Derived by taking the total metered net electricity generation within its
-# electric system and subtracting the total metered net electricity interchange occuring
+# electric system and subtracting the total metered net electricity interchange occurring
 # between the BA and its neighboring BAs. Total demand should equal or approximate the sum of demand by subregion.
 # 
-#  - Net generation: Derived from the metered outpout of electric generating units in a
+#  - Net generation: Derived from the metered output of electric generating units in a
 # BA's electric system. Generators on the distribution system are typically not included. Total net generation should equal the sum of net generation by energy source.
 # 
 #  - Total interchange: Net metered tie line flow from one BA to another directly
-# connnected BA. Typically, demand equals net generation minus total interchange.
+# connected BA. Typically, demand equals net generation minus total interchange.
 # 
 # Next it is important to understand the differences between imputed and adjusted data values:
 # 
@@ -82,25 +82,10 @@ df.iloc[4419:4429]
 # they do not report demand or demand forecasts.
 # 2. City of Homestead (HST) has a small number of local generators that do not always produce
 # electricity, so it will not always have net generation to report.
-# 3. Dynamic Scheduling and Pseduo ties can introduce some level of bias onto demand, demand
+# 3. Dynamic Scheduling and Pseudo ties can introduce some level of bias onto demand, demand
 # forecast, net generation and interchange.
 # 
-# Finally, it is important to understand the sources of energy. The sources of energy include                    Coal,
-#          Natural Gas,
-#          Nuclear,
-#          All Petroleum Products,
-#          Hydropower Excluding Pumped Storage,
-#          Pumped Storage',
-#          Solar without Integrated Battery Storage,
-#          Solar with Integrated Battery Storage,
-#          Wind without Integrated Battery Storage,
-#          Wind with Integrated Battery Storage,
-#          Battery Storage,
-#          Other Energy Storage,
-#          Unknown Energy Storage,
-#          Geothermal,
-#          Other Fuel Sources,
-#          Unknown Fuel Sources
+# Finally, it is important to understand the sources of energy. The sources of energy include Coal, Natural Gas, Nuclear, All Petroleum Products, Hydropower Excluding Pumped Storage, Pumped Storage, Solar without Integrated Battery Storage, Solar with Integrated Battery Storage, Wind without Integrated Battery Storage, Wind with Integrated Battery Storage, Battery Storage, Other Energy Storage, Unknown Energy Storage, Geothermal, Other Fuel Sources, Unknown Fuel Sources
 #%% md
 # ## Understanding Demand by Balancing Authority
 # 
@@ -517,7 +502,7 @@ top_flows = df_normalized.groupby(["FromBA", "FromBAName", "ToBA", "ToBAName"])[
 top_flows.to_csv("ba_top_flows.csv", index=False)
 #%%
 print("Top 10 BA to BA Flows:")
-top_flows.head(10)
+print(top_flows.head(10))
 #%% md
 # ## Conclusion
 # 
